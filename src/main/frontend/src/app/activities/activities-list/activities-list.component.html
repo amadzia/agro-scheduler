@@ -1,0 +1,13 @@
+<ul class="list-group">
+  <li *ngFor="let activity of activities" class="list-group-item">
+    <div class="activity-checkbox">
+      <input type="checkbox"
+             class="list-child"
+             (change)="onActivityChange($event, activity)"
+             [checked]="activity.completed">
+      <span>&nbsp;&nbsp;</span>
+      <span ngClass="{{activity.completed ? 'activityName completed' : 'activityName'}}">{{activity.activityName}}</span>
+      <span class="label {{getCreationDateLabel(activity)}} float-right">{{activity.creationDate}}</span>
+    </div>
+  </li>
+</ul>

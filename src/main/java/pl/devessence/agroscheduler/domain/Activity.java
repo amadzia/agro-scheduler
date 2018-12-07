@@ -14,23 +14,13 @@ import java.time.LocalDate;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Plant {
+public class Activity {
 
     @Id
     @GeneratedValue
     private Long id;
-
-    private String plantName;
     private String activityName;
     @JsonFormat(pattern = "MM/dd/yyyy")
-    private LocalDate startDate;
-    @JsonFormat(pattern = "MM/dd/yyyy")
-    private LocalDate endDate;
-    private Integer minTemperature;
-    private Integer maxTemperature;
-    private Boolean sunny;
-    private Boolean cloudy;
-    private Boolean rainy;
-    private String additionalInfo;
+    private LocalDate creationDate;
     private Boolean completed;
 }
